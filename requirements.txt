@@ -1,2 +1,2 @@
-pyrogram==2.1.15
+pyrogram==2.0.106
 aiohttp>=3.9.0
