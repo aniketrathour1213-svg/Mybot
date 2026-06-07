@@ -644,18 +644,17 @@ async def main():
     logger.info("=" * 50)
     logger.info("🚀 Starting Video Monetization Bot...")
 
-    # Start health server
     asyncio.create_task(run_health_server())
 
-    # Start bot
-await app.start()
-me = await app.get_me()
-logger.info(f"BOT USERNAME = @{me.username}")
-logger.info(f"✅ Bot started: @{app.me.username}")
-logger.info("🔄 Bot is running. Waiting for messages...")
+    await app.start()
 
-await asyncio.Event().wait()
+    me = await app.get_me()
+    logger.info(f"BOT USERNAME = @{me.username}")
 
+    logger.info(f"✅ Bot started: @{app.me.username}")
+    logger.info("🔄 Bot is running. Waiting for messages...")
+
+    await asyncio.Event().wait()
 
 # ============================================================
 # ENTRY POINT
